@@ -76,3 +76,11 @@ header {
    flex: 2;
    align-self: flex-end;
 }
+
+#staff > div {
+   display: flex;
+   flex-wrap: wrap;
+}
+.staff-profile {
+   flex: 0 0 33%;
+}
