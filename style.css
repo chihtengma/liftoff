@@ -63,31 +63,31 @@ section h2:after {
 
 /* Header defaults */
 header {
-  background-color: rgba(37, 37, 37, 0.8);
-  display: flex;
-  position: fixed;
-  z-index: 2;
-  left: 5%;
-  width: 90%;
-  height: 60px;
-  border-radius: 0px 0px 30px 30px;
+   background-color: rgba(37, 37, 37, 0.8);
+   display: flex;
+   position: fixed;
+   z-index: 2;
+   left: 5%;
+   width: 90%;
+   height: 60px;
+   border-radius: 0px 0px 30px 30px;
 }
 
-header > div{
-  position: relative;
-  top: 10px;
-  left: 10px;
+header > div {
+   position: relative;
+   top: 10px;
+   left: 10px;
 }
 
-header > nav > div{
-  margin: 40px;
-  display: inline;
+header > nav > div {
+   margin: 40px;
+   display: inline;
 }
 
-header > nav{
-  position: absolute;
-  left: 70%;
-  top: 10px;
+header > nav {
+   position: absolute;
+   left: 70%;
+   top: 10px;
 }
 
 #about > div {
@@ -115,21 +115,38 @@ header > nav{
    flex: 0 0 33%;
    text-align: center;
 }
-
-.logo img{
-  height: 40px;
+.staff-profile i {
+   font-size: 50px;
+}
+.staff-name {
+   font-weight: bold;
+   font-size: 25px;
 }
 
-a{
-  color: white;
-  text-decoration: none;
-  font-size: large;
+.logo img {
+   height: 40px;
 }
 
-#carousel-text{
-  position:absolute;
-  text-align: center;
-  left: 30%;
-  top: 30%;
-  color: white;
+a {
+   color: white;
+   text-decoration: none;
+   font-size: large;
+}
+
+#carousel-text {
+   position: absolute;
+   text-align: center;
+   left: 30%;
+   top: 30%;
+   color: white;
+}
+
+@media (max-width: 800px) {
+   #staff > div {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
 }
