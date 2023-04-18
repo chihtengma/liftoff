@@ -67,6 +67,7 @@ header {
 }
 #about > div {
    display: flex;
+   justify-content: center;
 }
 
 #about p {
@@ -80,7 +81,11 @@ header {
 #staff > div {
    display: flex;
    flex-wrap: wrap;
+   justify-content: center;
+   align-items: center;
+   flex-direction: row;
 }
 .staff-profile {
    flex: 0 0 33%;
+   text-align: center;
 }
