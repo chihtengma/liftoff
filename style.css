@@ -63,38 +63,89 @@ section h2:after {
 
 /* Header defaults */
 header {
-   background-color: rgba(37, 37, 37, 0.8);
    display: flex;
    position: fixed;
+   margin: 0 4em;
+   padding: 10px;
+   width: calc(100% - 8em);
+   color: #fff;
+   background-color: rgba(37, 37, 37, 0.8);
+   border-radius: 0 0 1em 1em;
    z-index: 2;
-   left: 5%;
-   width: 90%;
-   height: 60px;
-   border-radius: 0px 0px 30px 30px;
 }
 
-header > div {
-   position: relative;
-   top: 10px;
-   left: 10px;
+header .logo {
+   flex-grow: 1;
+   padding-top: 0.25em;
+}
+header .logo img {
+   width: 9em;
+}
+header nav {
+   display: flex;
 }
 
-header > nav > div {
-   margin: 40px;
-   display: inline;
+.nav-item {
+   height: 1.5em;
+   margin: 0 1.5em 0 0;
 }
 
-header > nav {
-   position: absolute;
-   left: 70%;
-   top: 10px;
+.nav-item a {
+   font-size: 1.3em;
+   color: #fff;
+   text-decoration: none;
+   padding: 5px;
+}
+.nav-item a:hover {
+   color: #202b47;
+   border-radius: 5px;
+   background-color: #fff;
+   box-shadow: #d3d3d3;
 }
 
-#about > div {
+/* Basic Flex Constructs */
+
+.flex {
+   display: flex;
+}
+
+@media screen and (max-width: 600px) {
+   .flex {
+      flex-flow: column wrap;
+      align-items: center;
+      padding: 0 15px;
+   }
+}
+
+/* Individual Sections */
+
+#carousel {
+   height: 100vh;
    display: flex;
    justify-content: center;
 }
 
+#carousel #carousel-text {
+   position: absolute;
+   top: 35vh;
+   color: #fff;
+   text-shadow: 2px 2px #252525;
+   z-index: 1;
+   text-align: center;
+}
+
+#carousel .carousel-image {
+   position: absolute;
+   display: block;
+   margin: auto;
+   min-width: 100%;
+   height: 100%;
+}
+
+#about {
+   background-color: #f1f1f1;
+   padding: 20px 20px 0 20px;
+}
 #about p {
    flex: 3;
    text-align: center;
@@ -104,49 +155,63 @@ header > nav {
    align-self: flex-end;
 }
 
-#staff > div {
+#about img {
+   display: block;
+   width: 100%;
+   height: auto;
+}
+
+#staff {
+   height: 100%;
+   color: #252525;
+}
+#staff .wrap {
    display: flex;
    flex-wrap: wrap;
-   justify-content: center;
-   align-items: center;
-   flex-direction: row;
 }
 .staff-profile {
-   flex: 0 0 33%;
-   text-align: center;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+   width: 100%;
+   /*border:solid black 3px;*/
 }
-.staff-profile i {
-   font-size: 50px;
-}
-.staff-name {
-   font-weight: bold;
-   font-size: 25px;
-}
-
-.logo img {
-   height: 40px;
-}
-
-a {
-   color: white;
-   text-decoration: none;
-   font-size: large;
-}
-
-#carousel-text {
-   position: absolute;
-   text-align: center;
-   left: 30%;
-   top: 30%;
-   color: white;
-}
-
-@media (max-width: 800px) {
-   #staff > div {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+@media (min-width: 600px) {
+   .staff-profile {
+      width: 50%;
    }
+}
+@media (min-width: 960px) {
+   .staff-profile {
+      width: 33%;
+   }
+}
+
+#staff .staff-profile:hover {
+   color: #fff;
+   background-color: #f39c12;
+}
+#staff .staff-profile .headshot {
+   height: 5em;
+   width: 5em;
+   /*margin-left: calc(50% - 2.5em);*/
+   padding-top: 10px;
+}
+#staff .staff-profile .staff-name {
+   text-align: center;
+   font-size: 2em;
+}
+#staff .staff-profile .staff-bio {
+   width: calc(100% - 5em);
+   margin-left: 2.5em;
+   text-align: center;
+   font-style: italic;
+}
+
+.footer {
+   width: 100%;
+   height: 6em;
+   background-color: #252525;
+   color: #fff;
 }
